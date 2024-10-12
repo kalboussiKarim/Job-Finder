@@ -24,5 +24,35 @@ To set up and run this project locally:
 1. Clone the repository:
     ```bash
     git clone https://github.com/kalboussiKarim/Job-Finder.git
-    cd jobs-application
+    cd Job-Finder
     ```
+2. Install PHP and JavaScript dependencies:
+    ```bash
+    composer install
+    npm install
+    ```
+3. Create a .env file and configure your database settings:
+
+    ```bash
+    cp .env.example .env
+    ```
+
+4. Generate the application key:
+
+    ```bash
+    php artisan key:generate
+    ```
+
+5. Migrate the database:
+
+    ```bash
+    php artisan migrate
+    ```
+
+6. Run the development server:
+
+    ```bash
+    php artisan serve
+    ```
+
+7. Enjoy :p
