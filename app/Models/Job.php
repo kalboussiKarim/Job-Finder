@@ -12,6 +12,13 @@ class Job extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'title',
+        'location',
+        'url',
+        'salary',
+        
+    ];
 
     public function employer(): BelongsTo
     {
@@ -26,8 +33,9 @@ class Job extends Model
 
     
 
-    public function tag()
+    public function tag(string $name)
     {
-
+        $tag = Tag::firstOrCreate(['name'=> $name]);
+        $this->tags()->attach($tag);
     }
 }

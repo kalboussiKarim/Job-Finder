@@ -5,11 +5,8 @@
         <section class="text-center pt-6">
             <h1 class="font-bold text-4xl" >Let's Find You A Great Job</h1>
 
-            {{-- <form action="" class="mt-4">
-                <input type="text" placeholder="I'm looking for..." class="rounded-xl bg-white/10 border-white/10 px-5 py-4 w-full max-w-xl" >
-            </form> --}}
-            <x-forms.form action="/search" >
-                <x-forms.input name="q" placeholder="I'm looking for..." />
+            <x-forms.form action="/search" class="mt-6" >
+                <x-forms.input :label="false" name="q" placeholder="I'm looking for..." />
             </x-forms.form>
         </section>
 
